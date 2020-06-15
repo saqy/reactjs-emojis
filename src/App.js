@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Emoji from './Emoji';
+import Emoji from './components/Emoji';
 
 function App() {
   return (

@@ -1,22 +1,24 @@
 {
   "name": "reactjs-emojis",
+  "main": "dist/Emoji.js",
+  "module": "dist/Emoji.js",
   "version": "0.1.0",
   "private": false,
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "emoji-js": "^3.5.0",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rm -rf dist && mkdir dist && npx babel src/components --out-dir dist --copy-files",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/components -d dist --copy-files"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,13 +35,19 @@
       "last 1 safari version"
     ]
   },
-  "babel": {
-    "presets": [
-      "@babel/preset-react"
-    ]
-  },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
-    "@babel/preset-react": "^7.10.1"
+    "@babel/preset-react": "^7.10.1",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "env",
+      "stage-2"
+    ]
   }
 }

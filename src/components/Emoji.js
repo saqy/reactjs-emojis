@@ -1,11 +1,10 @@
 import React from 'react';
-import EmojiConvertor from 'emoji-js';
 import PropTypes from "prop-types";
+import emojiData from './emoji.json'
 
 const Emoji = (props) => {
-var emoji = new EmojiConvertor();
   const {name, size} = props;
-  var emojiIcon = emoji.replace_colons(`:${name}:`);
+  var emojiIcon = emojiData[name];
     return (
         <span style={{fontSize: size+'px'}}>
             {emojiIcon}

@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 const Emoji = (props) => {
 var emoji = new EmojiConvertor();
   const {name, size} = props;
-  emoji.use_sheet = false;
   var emojiIcon = emoji.replace_colons(`:${name}:`);
     return (
         <span style={{fontSize: size+'px'}}>

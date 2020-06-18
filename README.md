@@ -19,14 +19,12 @@ import Emoji from 'reactjs-emojis';
 
 function App() {
   return (
-    <div className="App">
-        <div className="emoji-container">
+    <div >
           <Emoji name="smiley" size="20"/>
           <Emoji name="monkey_face" size="40"/>
           <Emoji name="wink" size="60"/>
           <Emoji name="rolling_on_the_floor_laughing" size="80"/>
           <Emoji name="thinking_face" size="100"/>
-        </div>
     </div>
   );
 }

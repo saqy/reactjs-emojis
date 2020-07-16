@@ -4,7 +4,7 @@ import emojiData from './emoji.json'
 
 const Emoji = (props) => {
   const {name, size} = props;
-  var emojiIcon = emojiData[name];
+  const emojiIcon = emojiData[name];
     return (
         <span style={{fontSize: size+'px'}}>
             {emojiIcon}
